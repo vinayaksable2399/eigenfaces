@@ -1,7 +1,7 @@
-%https://blog.cordiner.net/2010/12/02/eigenfaces-face-recognition-matlab/
+
 clear all;
 close all;
-input_dir = 'C:\Users\ASI I\Desktop\vinayak sable\eigenfaces\vinayak sable\training set';
+input_dir = 'input training set images path';
 image_dims = [112,92];
  
 filenames = dir(fullfile(input_dir, '*.png'));
@@ -36,7 +36,7 @@ evectors = evectors(:, 1:num_eigenfaces);
 % step 6: project the images into the subspace to generate the feature vectors
 features = evectors' * shifted_images;
 
-input_image=imread('C:\Users\ASI I\Desktop\vinayak sable\eigenfaces\vinayak sable\testing set\4.png');
+input_image=imread('input tested image path');
 
 
 % calculate the similarity of the input to each training image
